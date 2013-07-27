@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = StartingBlocks::Growl::VERSION
   spec.authors       = ["Darren Cauthon"]
   spec.email         = ["darren@cauthon.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{growl support for starting_blocks}
+  spec.summary       = %q{growl support for starting_blocks}
   spec.homepage      = ""
   spec.license       = "MIT"
 
