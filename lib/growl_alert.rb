@@ -6,7 +6,7 @@ module StartingBlocks
       GROWL_NAME = "Test Run"
 
       def initialize
-        @g = Growl.new "localhost", GROWL_TITLE
+        @g = Growl.new "localhost", GROWL_NAME
         @g.add_notification GROWL_ID
       end
 
