@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'starting_blocks/growl/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "starting_blocks-growl"
-  spec.version       = StartingBlocks::Growl::VERSION
+  spec.version       = "0.0.1"
   spec.authors       = ["Darren Cauthon"]
   spec.email         = ["darren@cauthon.com"]
   spec.description   = %q{growl support for starting_blocks}
