@@ -5,9 +5,12 @@ module StartingBlocks
   module Extensions
     class GrowlAlert
 
+      GROWL_ID   = "starting_blocks Notification"
+      GROWL_NAME = "Test Run"
+
       def initialize
-        @g = Growl.new "localhost", "Test Run"
-        @g.add_notification "starting_blocks Notification"
+        @g = Growl.new "localhost", GROWL_TITLE
+        @g.add_notification GROWL_ID
       end
 
       def receive_files_to_run files
@@ -32,7 +35,7 @@ module StartingBlocks
       end
 
       def message title, message
-        @g.notify "starting_blocks Notification", title, message
+        @g.notify GROWL_ID, title, message
       end
     end
   end
