@@ -17,18 +17,31 @@ module StartingBlocks
       end
 
       def receive_results results
-        return if @spec_count == 0
-        if (results[:tests] || 0) == 0
-          message "No Tests To Run", ""
-        elsif (results[:errors] || 0) > 0
-          message "Fail", "#{results[:errors]} errors"
-        elsif (results[:failures] || 0) > 0
-          message "Fail", "#{results[:failures]} fails"
-        elsif (results[:skips] || 0) > 0
-          message "Skipped", "#{results[:skips]} skips"
-        else
-          message "Success", "#{results[:tests]} passed"
+        return if @spec_count.to_i == 0
+        if results[:skips].to_i > 0
+          message "Skipped", "1 skip"
         end
+        if results[:errors].to_i > 0
+          message "Fail", "#{results[:errors]} error"
+        elsif results[:failures].to_i > 0
+          message "Fail", "#{results[:failures]} error"
+        elsif results[:tests].to_i > 0
+          message "Success", "#{results[:tests]} passed"
+        else
+          message "No Tests To Run", ""
+        end
+        #return if @spec_count == 0
+        #if (results[:tests] || 0) == 0
+          #message "No Tests To Run", ""
+        #elsif (results[:errors] || 0) > 0
+          #message "Fail", "#{results[:errors]} errors"
+        #elsif (results[:failures] || 0) > 0
+          #message "Fail", "#{results[:failures]} fails"
+        #elsif (results[:skips] || 0) > 0
+          #message "Skipped", "#{results[:skips]} skips"
+        #else
+          #message "Success", "#{results[:tests]} passed"
+        #end
       end
 
       def message title, message
