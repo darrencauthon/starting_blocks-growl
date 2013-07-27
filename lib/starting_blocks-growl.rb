@@ -3,7 +3,7 @@ require 'ruby-growl'
 
 module StartingBlocks
   module Extensions
-    class Growl
+    class GrowlAlert
 
       def initialize
         @g = Growl.new "localhost", "Test Run"
@@ -38,4 +38,4 @@ module StartingBlocks
   end
 end
 
-StartingBlocks::Publisher.subscribers << StartingBlocks::Extensions::Growl.new
+StartingBlocks::Publisher.subscribers << StartingBlocks::Extensions::GrowlAlert.new

@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "starting_blocks-growl"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.2"
   spec.authors       = ["Darren Cauthon"]
   spec.email         = ["darren@cauthon.com"]
   spec.description   = %q{growl support for starting_blocks}
