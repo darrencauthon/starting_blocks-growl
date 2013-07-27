@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "starting_blocks-growl"
-  spec.version       = "0.0.2"
+  spec.version       = "0.0.3"
   spec.authors       = ["Darren Cauthon"]
   spec.email         = ["darren@cauthon.com"]
   spec.description   = %q{growl support for starting_blocks}
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
   spec.add_runtime_dependency "starting_blocks"
+  spec.add_runtime_dependency "ruby-growl"
 end
