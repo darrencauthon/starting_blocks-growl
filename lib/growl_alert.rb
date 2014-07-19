@@ -30,18 +30,6 @@ module StartingBlocks
         else
           message "No Tests To Run", ""
         end
-        #return if @spec_count == 0
-        #if (results[:tests] || 0) == 0
-          #message "No Tests To Run", ""
-        #elsif (results[:errors] || 0) > 0
-          #message "Fail", "#{results[:errors]} errors"
-        #elsif (results[:failures] || 0) > 0
-          #message "Fail", "#{results[:failures]} fails"
-        #elsif (results[:skips] || 0) > 0
-          #message "Skipped", "#{results[:skips]} skips"
-        #else
-          #message "Success", "#{results[:tests]} passed"
-        #end
       end
 
       def message title, message
